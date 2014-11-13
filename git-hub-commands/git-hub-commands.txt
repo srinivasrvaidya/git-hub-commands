@@ -1,0 +1,72 @@
+Github Commands
+
+
+Q) How to clone a git hub repository ?
+
+Go to there github page., copy HTTPS clone URL 
+
+Open your terminal;
+Move into the folder, where you want to clone., ie., where want the local repository to be located.
+
+$git clone <HTTPS clone URL> 
+
+Q) how to add files onto your github repository ?
+
+Move into the folder where you have the file to be added.
+
+$git add <file name>
+
+$git commit -m “comments”
+
+$git remote add origin git@github.com:srinivasrvaidya/git-hub-commands.git
+
+$git push -u origin master
+[enter username and passoword]
+
+Q) How to send pull request?
+
+One your forked github link, click on pull request button, fill the text box and send the pull request.
+
+Q) how to sync github forked repo with original repo ?
+
+    1) git clone git@github.com:<your-gh-name>/ezpublish.git ezforksync
+
+    2) cd ezforksync
+
+    3) git remote add upstream https://github.com/ezsystems/ezpublish.git
+
+    4)  git pull upstream master
+
+    5) git push
+
+Steps explained a bit:
+
+1. Clone your fork repository on your PC. 
+
+2. Go in newly created folder that contains your copy of repository so that next git commands will work
+
+3. Add a "remote" named upstream (name doesn't matter) that points to ezsystems/ezpublish repo
+
+4. Fetch all missing comits from the remote repo and merge them into your local branch (master)
+
+5. Push all new commits that where got from upstream into your fork
+
+That's all, comments are welcomed.
+
+Q) how to delete file/folder from your github repo ?
+
+You could checkout 'master' with both directories;
+
+$git rm -r one-of-the-directories
+$git commit -m "Remove duplicated directory"
+$git push origin master
+
+Remove directory from git but NOT local
+
+As mentioned in the comments, what you usually want to do is remove this directory from git but not delete it entirely from the filesystem (local)
+
+In that case use:
+
+$git rm -r --cached myFolder
+
+

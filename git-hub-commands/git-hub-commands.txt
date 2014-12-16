@@ -76,3 +76,8 @@ Q) How to remove upstream ?
 $ git remote rm upstream
 $ git remote add upstream https://github.com/Foo/repos.git
 
+Q) How to rename a folder?
+
+$git mv oldfolder newfolder
+$git commit -m "changed the foldername"
+$git push
